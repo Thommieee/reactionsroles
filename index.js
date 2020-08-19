@@ -36,6 +36,50 @@ client.on("ready", async () => {
 
 });
 
+client.on("guildMemberAdd", member => {
+
+    var role = member.guild.roles.cache.get("666322903251419166");
+
+    if (!role) return;
+
+    member.roles.add(role);
+
+    var channel = member.guild.channels.cache.get("745567092434272327");
+
+    var regels = member.guild.channels.cache.get("744841901332496404");
+
+    var getroles = member.guild.channels.cache.get("745019339916312607");
+
+    if (!channel) return;
+
+    var joinEmbed = new discord.MessageEmbed()
+        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+        .setDescription(`Hi ${member.user.username}, **welcome in this server!!** \n  In ${regels} can you find the rules of this server. Then go to ${getroles} to get your roles. \n I hope you have lots of fun in this server!`)
+        .setColor("#ff7300")
+        .setFooter("Member joined")
+        .setTimestamp();
+
+    channel.send(joinEmbed);
+
+});
+
+client.on("guildMemberRemove", member => {
+
+    var channel = member.guild.channels.cache.get("745567092434272327");
+
+    if (!channel) return;
+
+    var leaveEmbed = new discord.MessageEmbed()
+        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+        .setDescription(`Sadly ${member} has leaved`)
+        .setColor("#ff7300")
+        .setFooter("Member leaved")
+        .setTimestamp();
+
+    channel.send(leaveEmbed);
+
+});
+
 client.on("message", async message => {
 
     if (message.author.bot) return;
