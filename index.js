@@ -38,7 +38,7 @@ client.on("ready", async () => {
 
 client.on("guildMemberAdd", member => {
 
-    var role = member.guild.roles.cache.get("666322903251419166");
+    var role = member.guild.roles.cache.get("731837368281202688");
 
     if (!role) return;
 
