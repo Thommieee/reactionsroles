@@ -54,7 +54,7 @@ client.on("guildMemberAdd", member => {
 
     var joinEmbed = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hi ${member.user.username}, **welcome in this server!!** \n  In ${regels} can you find the rules of this server. Then go to ${getroles} to get your roles. \n I hope you have lots of fun in this server!`)
+        .setDescription(`Hi ${member}, **welcome in this server!!** \n  In ${regels} can you find the rules of this server. Then go to ${getroles} to get your roles. \n I hope you have lots of fun in this server!`)
         .setColor("#ff7300")
         .setFooter("Member joined")
         .setTimestamp();
