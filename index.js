@@ -71,9 +71,9 @@ client.on("guildMemberRemove", member => {
 
     var leaveEmbed = new discord.MessageEmbed()
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Sadly ${member} leaved`)
+        .setDescription(`Sadly ${member} left`)
         .setColor("#ff7300")
-        .setFooter("Member leaved")
+        .setFooter("Member left")
         .setTimestamp();
 
     channel.send(leaveEmbed);
