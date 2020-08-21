@@ -145,6 +145,8 @@ client.on("messageReactionAdd", async (reaction, user) => {
             await reaction.message.guild.members.cache.get(user.id).roles.add("745170968934351019")
         } else if (reaction.emoji.name === "🔢") {
             await reaction.message.guild.members.cache.get(user.id).roles.add("745170874382024706")
+        } else if (reaction.emoji.name === "🎤") {
+            await reaction.message.guild.members.cache.get(user.id).roles.add("746067791194488945")
         }
         
     }
@@ -191,6 +193,8 @@ client.on("messageReactionRemove", async (reaction, user) => {
             await reaction.message.guild.members.cache.get(user.id).roles.remove("745170968934351019")
         } else if (reaction.emoji.name === "🔢") {
             await reaction.message.guild.members.cache.get(user.id).roles.remove("745170874382024706")
+        } else if (reaction.emoji.name === "🎤") {
+            await reaction.message.guild.members.cache.get(user.id).roles.remove("746067791194488945")
         }
         
     }
