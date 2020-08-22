@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const role =  message.guild.roles.cache.find("731837368281202688");
+    const role =  message.guild.roles.cache.get("731837368281202688");
 
     var channel1 = message.guild.channels.cache.get("746661088912867360")
 
