@@ -8,23 +8,23 @@ module.exports.run = async (client, message, args) => {
 
     channel1.updateOverwrite(message.guild.roles.cache.find(x => x.name === "@everyone"), {
 
-        VIEW_CHANNEL: false,
-        SEND_MESSAGES: false,
-        ATTACK_FILES: false,
-        CONNECT: false,
-        ADD_REACTIONS: false,
-        READ_MESSAGE_HISTORY: false
+        VIEW_CHANNEL: true,
+        SEND_MESSAGES: true,
+        ATTACK_FILES: true,
+        CONNECT: true,
+        ADD_REACTIONS: true,
+        READ_MESSAGE_HISTORY: true
 
     });
 
     channel2.updateOverwrite(message.guild.roles.cache.find(x => x.name === "@everyone"), {
 
-        VIEW_CHANNEL: false,
-        SEND_MESSAGES: false,
-        ATTACK_FILES: false,
-        CONNECT: false,
-        ADD_REACTIONS: false,
-        READ_MESSAGE_HISTORY: false
+        VIEW_CHANNEL: true,
+        SEND_MESSAGES: true,
+        ATTACK_FILES: true,
+        CONNECT: true,
+        ADD_REACTIONS: true,
+        READ_MESSAGE_HISTORY: true
 
     });
 
