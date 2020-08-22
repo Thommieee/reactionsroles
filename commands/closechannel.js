@@ -2,15 +2,31 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    const role =  message.guild.roles.cache.get("731837368281202688");
-
     var channel1 = message.guild.channels.cache.get("746661088912867360")
 
     var channel2 = message.guild.channels.cache.get("746661126367870986")
 
-    channel1.overwritePermissions(role, { 'VIEW_CHANNEL': false })
+    channel1.updateOverwrite(message.guild.roles.cache.find(x => x.name === "@everyone"), {
 
-    channel2.overwritePermissions(role, { 'VIEW_CHANNEL': false })
+        VIEW_CHANNEL: true,
+        SEND_MESSAGES: true,
+        ATTACK_FILES: true,
+        CONNECT: true,
+        ADD_REACTIONS: true,
+        READ_MESSAGE_HISTORY: true
+
+    });
+
+    channel2.updateOverwrite(message.guild.roles.cache.find(x => x.name === "@everyone"), {
+
+        VIEW_CHANNEL: true,
+        SEND_MESSAGES: true,
+        ATTACK_FILES: true,
+        CONNECT: true,
+        ADD_REACTIONS: true,
+        READ_MESSAGE_HISTORY: true
+
+    });
 
 }
 
